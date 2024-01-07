@@ -37,8 +37,8 @@ function Card(props) {
                 <span className="gray"> ({props.reviewCount}) * </span>
                 <span className="gray"> {props.country} </span>
             </div>
-            <h2>{props.title}</h2>
-            <p>From <span className="bold">${props.price}</span> per person</p>
+            <p className="card--title">{props.title}</p>
+            <p className="card--price">From <span className="bold">${props.price}</span> per person</p>
         </div>
     );
 }

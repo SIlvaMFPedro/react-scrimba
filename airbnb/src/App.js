@@ -23,7 +23,9 @@ function App() {
     <div>
       <Navbar/>
       <Hero/>
-      {datacards}
+      <section className="cards-list">
+        {datacards}
+      </section>
     </div>
   );
 }
