@@ -11,6 +11,11 @@ section {
     padding: 20px;
 }
 
+h2 {
+    font-size: 0.75rem;
+    font-weight: normal;
+}
+
 .gray {
     color:gray;
 }
@@ -21,7 +26,7 @@ section {
 
 .card {
     width: 175px;
-    font-size: 12px;
+    font-size: 0.75rem;
     padding: 20px;
 }
 

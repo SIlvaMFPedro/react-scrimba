@@ -1,19 +1,44 @@
+import star from '../images/star.png';
 import katiezaferes from '../images/katie-zaferes.png';
-import star from "../images/star.png";
+import weddingphoto from '../images/wedding-photography.png';
+import mountainbike from '../images/mountain-bike.png';
+
 import './Card.css';
 
-function Card() {
+function Card(props) {
+    let cardImg;
+    if (props.image === "katie-zaferes.png"){
+        cardImg = katiezaferes;
+    }
+    else if (props.image === "wedding-photography.png"){
+        cardImg = weddingphoto;
+    }
+    else{
+        cardImg = mountainbike;
+    }
+
+    console.log(katiezaferes);
+    console.log(cardImg);
+
     return (
         <div className="card">
-            <img src={katiezaferes} className="card--photo"/>
+            <img 
+                src={cardImg}
+                className="card--photo"
+                alt="Main card image."
+            />
             <div className="card--stats">
-                <img src={star} className="star--image"/>
-                <span>5.0 </span>
-                <span className="gray"> (6) * </span>
-                <span className="gray"> USA </span>
+                <img 
+                    src={star} 
+                    className="star--image"
+                    alt="Star icon."
+                />
+                <span>{props.rating} </span>
+                <span className="gray"> ({props.reviewCount}) * </span>
+                <span className="gray"> {props.country} </span>
             </div>
-            <p>Life Lessons with Katie Zaferes</p>
-            <p>From <span className="bold">$136</span> per person</p>
+            <h2>{props.title}</h2>
+            <p>From <span className="bold">${props.price}</span> per person</p>
         </div>
     );
 }
