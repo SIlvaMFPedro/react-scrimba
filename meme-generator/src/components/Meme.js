@@ -1,13 +1,17 @@
 import './Meme.css';
 import memesData from '../memesData';
+import React from 'react';
 
 function Meme() {
+
+  const [memeImage, setMemeImage] = React.useState("");
   
   function getMemeImg(){
     const memesArray = memesData.data.memes;
     const randomNumber = Math.floor(Math.random() * memesArray.length);
-    const url = memesArray[randomNumber].url;
-    
+    setMemeImage(memesArray[randomNumber].url);
+
+
   }
 
   return (
@@ -23,6 +27,9 @@ function Meme() {
             </div>
             <div>
                 <button className="form--button" onClick={getMemeImg}>Get a new meme image 🖼</button>
+            </div>
+            <div className="meme">
+                <img src={memeImage} className="meme--image" alt=""/>
             </div>
         </div>
     </main>

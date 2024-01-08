@@ -20,10 +20,17 @@ button {
     cursor: pointer;
 }
 
+.meme {
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+
 .form {
     display: grid;
     grid-template: 100% 100% / 1fr 1fr;
     gap: 17px;
+    
 }
 
 .form--label {
@@ -45,4 +52,14 @@ button {
     font-family: "Karla", sans-serif;
     border-radius: 5px;
     
+}
+
+.meme--image {
+    position: absolute;
+    right: 50%;
+    max-width: 100%;
+    align-self: center;
+    border-radius: 5px;
+    margin: auto;
+    transform: translateX(-7.5%) translateY(50%);
 }
