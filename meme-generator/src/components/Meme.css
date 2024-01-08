@@ -8,7 +8,9 @@ body {
 }
 
 main {
-    padding: 36px;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
 }
 
 button {
@@ -18,18 +20,19 @@ button {
     color: white;
     border: none;
     cursor: pointer;
+    vertical-align: top;
 }
 
 .meme {
-    width: 400px;
-    height: 400px;
     position: relative;
+    margin-top: 2em;
+    align-self: center;
 }
 
 .form {
     display: grid;
-    grid-template: 100% 100% / 1fr 1fr;
-    gap: 17px;
+    grid-template: 40px 40px / 1fr 1fr;
+    gap: 1em;
     
 }
 
@@ -55,11 +58,5 @@ button {
 }
 
 .meme--image {
-    position: absolute;
-    right: 50%;
     max-width: 100%;
-    align-self: center;
-    border-radius: 5px;
-    margin: auto;
-    transform: translateX(-7.5%) translateY(50%);
 }

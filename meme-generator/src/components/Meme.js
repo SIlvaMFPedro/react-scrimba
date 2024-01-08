@@ -28,9 +28,9 @@ function Meme() {
             <div>
                 <button className="form--button" onClick={getMemeImg}>Get a new meme image 🖼</button>
             </div>
-            <div className="meme">
-                <img src={memeImage} className="meme--image" alt=""/>
-            </div>
+        </div>
+        <div className="meme">
+            <img src={memeImage} className="meme--image" alt="meme"/>
         </div>
     </main>
   );
