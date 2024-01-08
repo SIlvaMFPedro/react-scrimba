@@ -1,2 +1,2 @@
 # react-scrimba
-React folder for scrimba project files
+React folder for [scrimba](https://scrimba.com/learn/learnreact) project files
