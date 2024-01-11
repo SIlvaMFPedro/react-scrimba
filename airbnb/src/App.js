@@ -2,6 +2,7 @@ import Navbar from './components/Navbar';
 import Hero from "./components/Hero";
 import Card from './components/Card';
 import data from './data';
+import React, { useState } from "react";
 import './App.css';
 
 console.log(data);
@@ -21,10 +22,18 @@ function App() {
           openSpots={item.openSpots}/>
     )
   })
+
+  const [darkMode, setDarkMode] = useState(true);
+
+  function toggleDarkMode() {
+    setDarkMode(prevMode => !prevMode);
+  }
+
+
   return (
-    <div>
-      <Navbar/>
-      <Hero/>
+    <div className="container">
+      <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
+      <Hero darkMode={darkMode}/>
       <section className="cards-list">
         {datacards}
       </section>
